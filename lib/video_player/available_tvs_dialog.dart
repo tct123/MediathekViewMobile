@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_ws/global_state/list_state_container.dart';
 import 'package:flutter_ws/widgets/videolist/circular_progress_with_text.dart';
 import 'package:logging/logging.dart';
@@ -65,8 +65,8 @@ class _AvailableTVsDialogState extends State<AvailableTVsDialog> {
         .toList();
     if (tvPlayerController.value.playbackOnTvStarted) {
       availableTVs.add(new SimpleDialogOption(
-        child: new RaisedButton(
-          child: new Text("Verbindung trennen",
+        child: CupertinoButton(
+          child: Text("Verbindung trennen",
               style: new TextStyle(color: Colors.white, fontSize: 20.0)),
           color: Color(0xffffbf00),
           onPressed: () {

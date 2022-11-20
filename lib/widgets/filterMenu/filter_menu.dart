@@ -6,7 +6,6 @@ import 'package:flutter_ws/widgets/filterMenu/filtermenu_channel_edit_button.dar
 import 'package:flutter_ws/widgets/filterMenu/search_filter.dart';
 import 'package:flutter_ws/widgets/filterMenu/video_length_slider.dart';
 import 'package:logging/logging.dart';
-import 'package:meta/meta.dart';
 
 class FilterMenu extends StatelessWidget {
   final Logger logger = new Logger('FilterMenu');
@@ -206,7 +205,7 @@ class FilterMenu extends StatelessWidget {
           handleTabCallback: handleTapOnFilter);
     } else {
       lengthFilter = new SearchFilter(
-          filterId: "Länge", handleTabCallback: handleTapOnFilter);
+          filterId: "Länge", handleTabCallback: handleTapOnFilter, filterValue: '',);
     }
 
     return new Row(

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:countly_flutter/countly_flutter.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ws/database/database_manager.dart';
 import 'package:flutter_ws/database/video_entity.dart';
@@ -209,7 +210,7 @@ class _FlutterVideoPlayerState extends State<FlutterVideoPlayer> {
       content: new Text('Soll die aktuelle TV Wiedergabe unterbrochen werden?',
           style: new TextStyle(color: Colors.white, fontSize: 16.0)),
       actions: <Widget>[
-        RaisedButton(
+        CupertinoButton(
           child: const Text('Nein'),
           onPressed: () async {
             widget.isAlreadyPlayingDifferentVideoOnTV = false;
@@ -232,7 +233,7 @@ class _FlutterVideoPlayerState extends State<FlutterVideoPlayer> {
             setState(() {});
           },
         ),
-        RaisedButton(
+        CupertinoButton(
           child: const Text('Ja'),
           onPressed: () {
             widget.appSharedState.appState.samsungTVCastManager.stop();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 
 class FilterMenuChannelEditButton extends StatelessWidget {
@@ -18,7 +19,7 @@ class FilterMenuChannelEditButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Container(
         height: 35.0,
-        child: new RaisedButton(
+        child: RaisedButton(
           color: Colors.black,
           shape: RoundedRectangleBorder(
               borderRadius: new BorderRadius.circular(8.0)),

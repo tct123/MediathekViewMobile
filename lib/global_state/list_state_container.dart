@@ -11,7 +11,6 @@ import 'package:flutter_ws/platform_channels/samsung_tv_cast_manager.dart';
 import 'package:flutter_ws/platform_channels/video_preview_manager.dart';
 import 'package:flutter_ws/util/device_information.dart';
 import 'package:logging/logging.dart';
-import 'package:meta/meta.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -93,8 +92,7 @@ class AppSharedStateContainer extends StatefulWidget {
       {@required this.child, this.videoListState, this.appState});
 
   static AppSharedState of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(_InheritedWidget)
-            as _InheritedWidget)
+    return (context.dependOnInheritedWidgetOfExactType<_InheritedWidget>())
         .data;
   }
 

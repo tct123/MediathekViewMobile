@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:connectivity/connectivity.dart';
 import 'package:filesize/filesize.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +17,6 @@ import 'package:flutter_ws/widgets/videolist/util/util.dart';
 import 'package:flutter_ws/widgets/videolist/video_description.dart';
 import 'package:http/http.dart' as http;
 import 'package:logging/logging.dart';
-import 'package:meta/meta.dart';
 import 'package:uuid/uuid.dart';
 
 import 'download_switch.dart';
@@ -72,7 +69,6 @@ class _ListCardState extends State<ListCard> {
     downloadManager = appWideState.appState.downloadManager;
     databaseManager = appWideState.appState.databaseManager;
     VideoListState videoListState = appWideState.videoListState;
-    Orientation orientation = MediaQuery.of(context).orientation;
 
     subscribeToProgressChannel();
     loadCurrentStatusFromDatabase(widget.video.id);

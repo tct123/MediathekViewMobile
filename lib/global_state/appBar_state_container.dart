@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 class FilterMenuState {
   bool isFilterMenuOpen;
@@ -31,8 +30,7 @@ class FilterBarSharedState extends StatefulWidget {
   });
 
   static StateContainerAppBarState of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(_InheritedStateContainer)
-            as _InheritedStateContainer)
+    return (context.dependOnInheritedWidgetOfExactType<_InheritedStateContainer>())
         .data;
   }
 
